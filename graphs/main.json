@@ -52,12 +52,22 @@
                 "height": 72
             }
         },
-        "browser-app/DoSomething_17vvl": {
-            "component": "browser-app/DoSomething",
+        "browser-app/print_is_multiple_lists_e94nk": {
+            "component": "browser-app/print_is_multiple_lists",
             "metadata": {
-                "label": "browser-app/DoSomething",
-                "x": 432,
-                "y": 396,
+                "label": "browser-app/print_is_multiple_lists",
+                "x": 504,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app/print_next_and_mean_9pinh": {
+            "component": "browser-app/print_next_and_mean",
+            "metadata": {
+                "label": "browser-app/print_next_and_mean",
+                "x": 504,
+                "y": 504,
                 "width": 72,
                 "height": 72
             }
@@ -94,6 +104,28 @@
             "tgt": {
                 "process": "browser-app/DoSomething_opoqt",
                 "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "browser-app/multiply_vbxt1",
+                "port": "product"
+            },
+            "tgt": {
+                "process": "browser-app/print_is_multiple_lists_e94nk",
+                "port": "multiples_and_divisors_stream"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "browser-app/DoSomething_opoqt",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "browser-app/print_next_and_mean_9pinh",
+                "port": "input_stream"
             },
             "metadata": {}
         },

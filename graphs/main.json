@@ -70,6 +70,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "browser-app/averages_list_shjfx": {
+            "component": "browser-app/averages_list",
+            "metadata": {
+                "label": "browser-app/averages_list",
+                "x": 576,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -81,8 +91,7 @@
             "tgt": {
                 "process": "dom/WriteHtml_fpz6j",
                 "port": "container"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -131,8 +140,7 @@
             "tgt": {
                 "process": "core/Kick_ey1nh",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -142,8 +150,7 @@
             "tgt": {
                 "process": "dom/WriteHtml_fpz6j",
                 "port": "html"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": "#button",

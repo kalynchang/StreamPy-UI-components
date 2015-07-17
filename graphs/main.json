@@ -3,80 +3,61 @@
         "name": "main",
         "environment": {
             "type": "noflo-browser",
-            "content": "<button id='button'>Go!</button>\n<p id='message'></p>"
+            "content": ""
         },
-        "icon": ""
+        "icon": "",
+        "description": "Test custom modules"
     },
     "inports": {},
     "outports": {},
     "groups": [],
     "processes": {
-        "dom/GetElement_7amk2": {
-            "component": "dom/GetElement",
-            "metadata": {
-                "label": "dom/GetElement",
-                "x": 252,
-                "y": 180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Output_cg49": {
-            "component": "core/Output",
-            "metadata": {
-                "label": "core/Output",
-                "x": 432,
-                "y": 360,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "dom/WriteHtml_fpz6j": {
-            "component": "dom/WriteHtml",
-            "metadata": {
-                "label": "dom/WriteHtml",
-                "x": 684,
-                "y": 288,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "dom/GetElement_xvz54": {
-            "component": "dom/GetElement",
-            "metadata": {
-                "label": "dom/GetElement",
-                "x": 252,
-                "y": 288,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "interaction/ListenMouse_1l373": {
-            "component": "interaction/ListenMouse",
-            "metadata": {
-                "label": "interaction/ListenMouse",
-                "x": 432,
-                "y": 180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Kick_ey1nh": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "core/Kick",
-                "x": 576,
-                "y": 180,
-                "width": 72,
-                "height": 72
-            }
-        },
         "browser-app/averages_list_shjfx": {
             "component": "browser-app/averages_list",
             "metadata": {
                 "label": "browser-app/averages_list",
-                "x": 576,
-                "y": 432,
+                "x": -144,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app/split_even_odd_fp7v4": {
+            "component": "browser-app/split_even_odd",
+            "metadata": {
+                "label": "browser-app/split_even_odd",
+                "x": 72,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app/multiply_vbxt1": {
+            "component": "browser-app/multiply",
+            "metadata": {
+                "label": "browser-app/multiply",
+                "x": 288,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app/DoSomething_opoqt": {
+            "component": "browser-app/DoSomething",
+            "metadata": {
+                "label": "browser-app/DoSomething",
+                "x": 252,
+                "y": 468,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app/DoSomething_17vvl": {
+            "component": "browser-app/DoSomething",
+            "metadata": {
+                "label": "browser-app/DoSomething",
+                "x": 432,
+                "y": 396,
                 "width": 72,
                 "height": 72
             }
@@ -85,92 +66,49 @@
     "connections": [
         {
             "src": {
-                "process": "dom/GetElement_xvz54",
-                "port": "element"
+                "process": "browser-app/averages_list_shjfx",
+                "port": "output_list"
             },
             "tgt": {
-                "process": "dom/WriteHtml_fpz6j",
-                "port": "container"
-            }
-        },
-        {
-            "src": {
-                "process": "dom/GetElement_7amk2",
-                "port": "element"
-            },
-            "tgt": {
-                "process": "interaction/ListenMouse_1l373",
-                "port": "element"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "dom/GetElement_7amk2",
-                "port": "error"
-            },
-            "tgt": {
-                "process": "core/Output_cg49",
+                "process": "browser-app/split_even_odd_fp7v4",
                 "port": "in"
             },
-            "metadata": {
-                "route": 1
-            }
+            "metadata": {}
         },
         {
             "src": {
-                "process": "dom/GetElement_xvz54",
-                "port": "error"
+                "process": "browser-app/split_even_odd_fp7v4",
+                "port": "even"
             },
             "tgt": {
-                "process": "core/Output_cg49",
+                "process": "browser-app/multiply_vbxt1",
                 "port": "in"
             },
-            "metadata": {
-                "route": 1
-            }
+            "metadata": {}
         },
         {
             "src": {
-                "process": "interaction/ListenMouse_1l373",
-                "port": "click"
+                "process": "browser-app/split_even_odd_fp7v4",
+                "port": "odd"
             },
             "tgt": {
-                "process": "core/Kick_ey1nh",
+                "process": "browser-app/DoSomething_opoqt",
                 "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "core/Kick_ey1nh",
-                "port": "out"
             },
+            "metadata": {}
+        },
+        {
+            "data": "test parameters",
             "tgt": {
-                "process": "dom/WriteHtml_fpz6j",
-                "port": "html"
+                "process": "browser-app/averages_list_shjfx",
+                "port": "input_stream"
             }
         },
         {
-            "data": "#button",
+            "data": "5",
             "tgt": {
-                "process": "dom/GetElement_7amk2",
-                "port": "selector"
-            }
-        },
-        {
-            "data": "#message",
-            "tgt": {
-                "process": "dom/GetElement_xvz54",
-                "port": "selector"
-            }
-        },
-        {
-            "data": "Hello World!",
-            "tgt": {
-                "process": "core/Kick_ey1nh",
-                "port": "data"
+                "process": "browser-app/multiply_vbxt1",
+                "port": "constant_factor"
             }
         }
     ]

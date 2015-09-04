@@ -71,6 +71,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "browser-app-1/generate_stream_of_random_integers_nlc4c": {
+            "component": "browser-app-1/generate_stream_of_random_integers",
+            "metadata": {
+                "label": "browser-app-1/generate_stream_of_random_integers",
+                "x": 36,
+                "y": 540,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -82,8 +92,7 @@
             "tgt": {
                 "process": "browser-app/split_even_odd_fp7v4",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -93,8 +102,7 @@
             "tgt": {
                 "process": "browser-app/multiply_vbxt1",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -104,8 +112,7 @@
             "tgt": {
                 "process": "browser-app/DoSomething_opoqt",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -115,8 +122,7 @@
             "tgt": {
                 "process": "browser-app/print_is_multiple_lists_e94nk",
                 "port": "multiples_and_divisors_stream"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -126,8 +132,7 @@
             "tgt": {
                 "process": "browser-app/print_next_and_mean_9pinh",
                 "port": "input_stream"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": "test parameters",

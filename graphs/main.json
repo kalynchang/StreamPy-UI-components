@@ -12,6 +12,26 @@
     "outports": {},
     "groups": [],
     "processes": {
+        "browser-app/averages_list_shjfx": {
+            "component": "browser-app/averages_list",
+            "metadata": {
+                "label": "browser-app/averages_list",
+                "x": -144,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app/split_even_odd_fp7v4": {
+            "component": "browser-app/split_even_odd",
+            "metadata": {
+                "label": "browser-app/split_even_odd",
+                "x": 72,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
         "browser-app/multiply_vbxt1": {
             "component": "browser-app/multiply",
             "metadata": {
@@ -52,28 +72,58 @@
                 "height": 72
             }
         },
-        "browser-app-1/generate_stream_of_random_integers_l52y1": {
+        "browser-app-1/generate_stream_of_random_integers_nlc4c": {
             "component": "browser-app-1/generate_stream_of_random_integers",
             "metadata": {
                 "label": "browser-app-1/generate_stream_of_random_integers",
-                "x": -108,
-                "y": 324,
+                "x": 36,
+                "y": 540,
                 "width": 72,
                 "height": 72
             }
         },
-        "browser-app-1/split_even_odd_stream_wh4r4": {
-            "component": "browser-app-1/split_even_odd_stream",
+        "browser-app-1/generate_stream_of_random_integers_hzb31": {
+            "component": "browser-app-1/generate_stream_of_random_integers",
             "metadata": {
-                "label": "browser-app-1/split_even_odd_stream",
-                "x": 72,
-                "y": 396,
+                "label": "browser-app-1/generate_stream_of_random_integers",
+                "x": 0,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
         }
     },
     "connections": [
+        {
+            "src": {
+                "process": "browser-app/averages_list_shjfx",
+                "port": "output_list"
+            },
+            "tgt": {
+                "process": "browser-app/split_even_odd_fp7v4",
+                "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "browser-app/split_even_odd_fp7v4",
+                "port": "even"
+            },
+            "tgt": {
+                "process": "browser-app/multiply_vbxt1",
+                "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "browser-app/split_even_odd_fp7v4",
+                "port": "odd"
+            },
+            "tgt": {
+                "process": "browser-app/DoSomething_opoqt",
+                "port": "in"
+            }
+        },
         {
             "src": {
                 "process": "browser-app/multiply_vbxt1",
@@ -95,37 +145,11 @@
             }
         },
         {
-            "src": {
-                "process": "browser-app-1/split_even_odd_stream_wh4r4",
-                "port": "odd"
-            },
+            "data": "test parameters",
             "tgt": {
-                "process": "browser-app/multiply_vbxt1",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "browser-app-1/split_even_odd_stream_wh4r4",
-                "port": "even"
-            },
-            "tgt": {
-                "process": "browser-app/DoSomething_opoqt",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "browser-app-1/generate_stream_of_random_integers_l52y1",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "browser-app-1/split_even_odd_stream_wh4r4",
-                "port": "state"
-            },
-            "metadata": {}
+                "process": "browser-app/averages_list_shjfx",
+                "port": "input_stream"
+            }
         },
         {
             "data": "5",

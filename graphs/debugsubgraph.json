@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "name": "debugsubgraph",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "browser-app-1/generate_stream_of_random_integers_g12vc": {
+            "component": "browser-app-1/generate_stream_of_random_integers",
+            "metadata": {
+                "label": "browser-app-1/generate_stream_of_random_integers",
+                "x": 180,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": []
+}

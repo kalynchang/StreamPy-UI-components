@@ -86,8 +86,8 @@
             "component": "browser-app-1/generate_stream_of_random_integers",
             "metadata": {
                 "label": "browser-app-1/generate_stream_of_random_integers",
-                "x": 0,
-                "y": 468,
+                "x": -72,
+                "y": 504,
                 "width": 72,
                 "height": 72
             }

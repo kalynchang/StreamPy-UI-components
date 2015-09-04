@@ -12,26 +12,6 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "browser-app/averages_list_shjfx": {
-            "component": "browser-app/averages_list",
-            "metadata": {
-                "label": "browser-app/averages_list",
-                "x": -144,
-                "y": 396,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "browser-app/split_even_odd_fp7v4": {
-            "component": "browser-app/split_even_odd",
-            "metadata": {
-                "label": "browser-app/split_even_odd",
-                "x": 72,
-                "y": 396,
-                "width": 72,
-                "height": 72
-            }
-        },
         "browser-app/multiply_vbxt1": {
             "component": "browser-app/multiply",
             "metadata": {
@@ -72,48 +52,28 @@
                 "height": 72
             }
         },
-        "browser-app-1/generate_stream_of_random_integers_nlc4c": {
+        "browser-app-1/generate_stream_of_random_integers_l52y1": {
             "component": "browser-app-1/generate_stream_of_random_integers",
             "metadata": {
                 "label": "browser-app-1/generate_stream_of_random_integers",
-                "x": 36,
-                "y": 540,
+                "x": -108,
+                "y": 324,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app-1/split_even_odd_stream_wh4r4": {
+            "component": "browser-app-1/split_even_odd_stream",
+            "metadata": {
+                "label": "browser-app-1/split_even_odd_stream",
+                "x": 72,
+                "y": 396,
                 "width": 72,
                 "height": 72
             }
         }
     },
     "connections": [
-        {
-            "src": {
-                "process": "browser-app/averages_list_shjfx",
-                "port": "output_list"
-            },
-            "tgt": {
-                "process": "browser-app/split_even_odd_fp7v4",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "browser-app/split_even_odd_fp7v4",
-                "port": "even"
-            },
-            "tgt": {
-                "process": "browser-app/multiply_vbxt1",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "browser-app/split_even_odd_fp7v4",
-                "port": "odd"
-            },
-            "tgt": {
-                "process": "browser-app/DoSomething_opoqt",
-                "port": "in"
-            }
-        },
         {
             "src": {
                 "process": "browser-app/multiply_vbxt1",
@@ -135,11 +95,37 @@
             }
         },
         {
-            "data": "test parameters",
+            "src": {
+                "process": "browser-app-1/split_even_odd_stream_wh4r4",
+                "port": "odd"
+            },
             "tgt": {
-                "process": "browser-app/averages_list_shjfx",
-                "port": "input_stream"
-            }
+                "process": "browser-app/multiply_vbxt1",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "browser-app-1/split_even_odd_stream_wh4r4",
+                "port": "even"
+            },
+            "tgt": {
+                "process": "browser-app/DoSomething_opoqt",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "browser-app-1/generate_stream_of_random_integers_l52y1",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "browser-app-1/split_even_odd_stream_wh4r4",
+                "port": "state"
+            },
+            "metadata": {}
         },
         {
             "data": "5",

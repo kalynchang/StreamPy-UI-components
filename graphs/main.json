@@ -91,6 +91,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "browser-app-1/split_even_odd_stream_2qtcs": {
+            "component": "browser-app-1/split_even_odd_stream",
+            "metadata": {
+                "label": "browser-app-1/split_even_odd_stream",
+                "x": 57.816455696202546,
+                "y": 274.6851265822785,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [

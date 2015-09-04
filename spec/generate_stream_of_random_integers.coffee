@@ -2,24 +2,19 @@ noflo = require 'noflo'
 
 exports.getComponent = ->
   c = new noflo.Component
-  noflo = require 'noflo'
-
-exports.getComponent = ->
-  c = new noflo.Component
+ 
   c.inPorts.add 'func', (event, payload) ->
-    return unless event is 'func'
+    return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
   c.inPorts.add 'type', (event, payload) ->
-    return unless event is 'type'
+    return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
   c.inPorts.add 'state', (event, payload) ->
-    return unless event is 'state'
+    return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
   
-  
-  c
   c.outPorts.add 'out'
   c

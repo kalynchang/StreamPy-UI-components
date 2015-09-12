@@ -1,3 +1,5 @@
+# Basic template for your own component!
+
 noflo = require 'noflo'
 
 exports.getComponent = ->
@@ -10,16 +12,38 @@ exports.getComponent = ->
   c.description = 'do X'
 
   # Add input ports
-  c.inPorts.add 'in',
-    datatype: 'string'
-    process: (event, payload) ->
-      # What to do when port receives a packet
-      return unless event is 'data'
-      c.outPorts.out.send payload
+  c.inPorts.add 'func', (event, payload) ->
+    return unless event is 'data'
+    c.outPorts.out.send payload
+
+  c.inPorts.add 'type', (event, payload) ->
+    return unless event is 'data'
+    # Do something with the packet, then
+    c.outPorts.out.send payload
+
+  c.inPorts.add 'state', (event, payload) ->
+    return unless event is 'data'
+    # Do something with the packet, then
+    c.outPorts.out.send payload
+  
+  c.inPorts.add ‘parameter1’, (event, payload) ->
+    return unless event is 'data'
+    # Do something with the packet, then
+    c.outPorts.out.send payload
+
+  c.inPorts.add ‘parameter2’, (event, payload) ->
+    return unless event is 'data'
+    # Do something with the packet, then
+    c.outPorts.out.send payload
+
+  c.inPorts.add 'input’, (event, payload) ->
+    return unless event is 'data'
+    # Do something with the packet, then
+    c.outPorts.out.send payload
+
 
   # Add output ports
-  c.outPorts.add 'out',
-    datatype: 'string'
+  c.outPorts.add 'output’
 
   # Finally return the component instance
   c

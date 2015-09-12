@@ -9,16 +9,69 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "browser-app-1/generate_stream_of_random_integers_g12vc": {
+        "browser-app-1/generate_stream_of_random_integers_k9z7": {
             "component": "browser-app-1/generate_stream_of_random_integers",
             "metadata": {
                 "label": "browser-app-1/generate_stream_of_random_integers",
-                "x": 180,
+                "x": 144,
                 "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app-1/generate_stream_of_random_integers_af1us": {
+            "component": "browser-app-1/generate_stream_of_random_integers",
+            "metadata": {
+                "label": "browser-app-1/generate_stream_of_random_integers",
+                "x": 144,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app-1/print_value_stream_qd8yp": {
+            "component": "browser-app-1/print_value_stream",
+            "metadata": {
+                "label": "browser-app-1/print_value_stream",
+                "x": 324,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "browser-app-1/print_value_stream_1ijd3": {
+            "component": "browser-app-1/print_value_stream",
+            "metadata": {
+                "label": "browser-app-1/print_value_stream",
+                "x": 324,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
         }
     },
-    "connections": []
+    "connections": [
+        {
+            "src": {
+                "process": "browser-app-1/generate_stream_of_random_integers_k9z7",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "browser-app-1/print_value_stream_qd8yp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "browser-app-1/generate_stream_of_random_integers_af1us",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "browser-app-1/print_value_stream_1ijd3",
+                "port": "in"
+            },
+            "metadata": {}
+        }
+    ]
 }

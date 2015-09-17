@@ -48,6 +48,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "StreamPy-UI-components/split_even_odd_stream_icsrm": {
+            "component": "StreamPy-UI-components/split_even_odd_stream",
+            "metadata": {
+                "label": "StreamPy-UI-components/split_even_odd_stream",
+                "x": 474.3096835927575,
+                "y": 121.88362166945761,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [

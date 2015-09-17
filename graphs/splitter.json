@@ -1,0 +1,101 @@
+{
+    "properties": {
+        "name": "splitter",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {
+        "split_into_even_odd_in": {
+            "process": "StreamPy-UI-components/split_into_even_odd_d6x5t",
+            "port": "in",
+            "metadata": {
+                "x": 0,
+                "y": 0,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "outports": {
+        "multiply_elements_product": {
+            "process": "StreamPy-UI-components/multiply_elements_flie8",
+            "port": "product",
+            "metadata": {
+                "x": 504,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "product": {
+            "process": "StreamPy-UI-components/multiply_elements_2n3ud",
+            "port": "product",
+            "metadata": {
+                "x": 468,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "groups": [],
+    "processes": {
+        "StreamPy-UI-components/split_into_even_odd_d6x5t": {
+            "component": "StreamPy-UI-components/split_into_even_odd",
+            "metadata": {
+                "label": "StreamPy-UI-components/split_into_even_odd",
+                "x": 180,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "StreamPy-UI-components/multiply_elements_2n3ud": {
+            "component": "StreamPy-UI-components/multiply_elements",
+            "metadata": {
+                "label": "StreamPy-UI-components/multiply_elements",
+                "x": 324,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "StreamPy-UI-components/multiply_elements_flie8": {
+            "component": "StreamPy-UI-components/multiply_elements",
+            "metadata": {
+                "label": "StreamPy-UI-components/multiply_elements",
+                "x": 324,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "StreamPy-UI-components/split_into_even_odd_d6x5t",
+                "port": "odd"
+            },
+            "tgt": {
+                "process": "StreamPy-UI-components/multiply_elements_2n3ud",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "StreamPy-UI-components/split_into_even_odd_d6x5t",
+                "port": "even"
+            },
+            "tgt": {
+                "process": "StreamPy-UI-components/multiply_elements_flie8",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        }
+    ]
+}

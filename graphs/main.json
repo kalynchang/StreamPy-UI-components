@@ -13,7 +13,7 @@
             "component": "StreamPy-UI-components/generate_stream_of_random_integers",
             "metadata": {
                 "label": "StreamPy-UI-components/generate_stream_of_random_integers",
-                "x": 468,
+                "x": 36,
                 "y": 108,
                 "width": 72,
                 "height": 72
@@ -23,28 +23,38 @@
             "component": "StreamPy-UI-components/print_value_stream",
             "metadata": {
                 "label": "StreamPy-UI-components/print_value_stream",
-                "x": 756,
+                "x": 180,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "StreamPy-UI-components/print_value_stream_8ize4": {
+            "component": "StreamPy-UI-components/print_value_stream",
+            "metadata": {
+                "label": "StreamPy-UI-components/print_value_stream",
+                "x": 504,
                 "y": 180,
                 "width": 72,
                 "height": 72
             }
         },
-        "StreamPy-UI-components/generate_stream_of_random_integers_d2cyx": {
-            "component": "StreamPy-UI-components/generate_stream_of_random_integers",
+        "StreamPy-UI-components/print_value_stream_ybfbx": {
+            "component": "StreamPy-UI-components/print_value_stream",
             "metadata": {
-                "label": "StreamPy-UI-components/generate_stream_of_random_integers",
-                "x": 504,
-                "y": 324,
+                "label": "StreamPy-UI-components/print_value_stream",
+                "x": 432,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
         },
-        "StreamPy-UI-components/generate_stream_of_random_integers_jqjv0": {
-            "component": "StreamPy-UI-components/generate_stream_of_random_integers",
+        "StreamPy-UI-components/splitter": {
+            "component": "StreamPy-UI-components/splitter",
             "metadata": {
-                "label": "StreamPy-UI-components/generate_stream_of_random_integers",
-                "x": 504,
-                "y": 468,
+                "label": "splitter",
+                "x": 180,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -61,6 +71,36 @@
                 "port": "in"
             },
             "metadata": {}
+        },
+        {
+            "src": {
+                "process": "StreamPy-UI-components/generate_stream_of_random_integers_jrzy6",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "StreamPy-UI-components/splitter",
+                "port": "split_into_even_odd_in"
+            }
+        },
+        {
+            "src": {
+                "process": "StreamPy-UI-components/splitter",
+                "port": "multiply_elements_product"
+            },
+            "tgt": {
+                "process": "StreamPy-UI-components/print_value_stream_8ize4",
+                "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "StreamPy-UI-components/splitter",
+                "port": "multiply_elements_product"
+            },
+            "tgt": {
+                "process": "StreamPy-UI-components/print_value_stream_ybfbx",
+                "port": "in"
+            }
         },
         {
             "data": "0",

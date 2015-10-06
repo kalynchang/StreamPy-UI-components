@@ -9,73 +9,26 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "StreamPy-UI-components/generate_stream_of_random_integers_e9cmm": {
+        "StreamPy-UI-components/generate_stream_of_random_integers_xk4sr": {
             "component": "StreamPy-UI-components/generate_stream_of_random_integers",
             "metadata": {
                 "label": "StreamPy-UI-components/generate_stream_of_random_integers",
-                "x": 432,
-                "y": 72,
+                "x": 324,
+                "y": 252,
                 "width": 72,
                 "height": 72
             }
         },
-        "StreamPy-UI-components/multiply_elements_pel9h": {
-            "component": "StreamPy-UI-components/multiply_elements",
-            "metadata": {
-                "label": "StreamPy-UI-components/multiply_elements",
-                "x": 360,
-                "y": 216,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "StreamPy-UI-components/print_value_stream_dzhpr": {
+        "StreamPy-UI-components/print_value_stream_ys66o": {
             "component": "StreamPy-UI-components/print_value_stream",
             "metadata": {
                 "label": "StreamPy-UI-components/print_value_stream",
-                "x": 324,
-                "y": 324,
+                "x": 360,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
         }
     },
-    "connections": [
-        {
-            "src": {
-                "process": "StreamPy-UI-components/generate_stream_of_random_integers_e9cmm",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "StreamPy-UI-components/multiply_elements_pel9h",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "StreamPy-UI-components/multiply_elements_pel9h",
-                "port": "product"
-            },
-            "tgt": {
-                "process": "StreamPy-UI-components/print_value_stream_dzhpr",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "data": "1000",
-            "tgt": {
-                "process": "StreamPy-UI-components/multiply_elements_pel9h",
-                "port": "multiplier"
-            }
-        },
-        {
-            "data": "0",
-            "tgt": {
-                "process": "StreamPy-UI-components/print_value_stream_dzhpr",
-                "port": "state"
-            }
-        }
-    ]
+    "connections": []
 }

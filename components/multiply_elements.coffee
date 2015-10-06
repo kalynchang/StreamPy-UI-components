@@ -7,31 +7,23 @@ exports.getComponent = ->
     return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
-
   c.inPorts.add 'type', (event, payload) ->
     return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
-
   c.inPorts.add 'state', (event, payload) ->
     return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
-
-  c.inPorts.add ‘width’, (event, payload) ->
+  c.inPorts.add 'multiplier', (event, payload) ->
     return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
-
-  c.inPorts.add ‘height’, (event, payload) ->
+  c.inPorts.add 'in', (event, payload) ->
     return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
+  
+  c.outPorts.add 'product'
 
-  c.inPorts.add ‘color’, (event, payload) ->
-    return unless event is 'data'
-    # Do something with the packet, then
-    c.outPorts.out.send payload
-
-  c.outPorts.add ‘shape’
   c

@@ -23,6 +23,7 @@ exports.getComponent = ->
     return unless event is 'data'
     # Do something with the packet, then
     c.outPorts.out.send payload
+  
   c.outPorts.add 'product'
 
   c
